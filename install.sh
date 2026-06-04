@@ -135,22 +135,38 @@ install_s-ui() {
     cd /tmp/
 
     if [ $# == 0 ]; then
-        # 已将 API 地址修改为你自己的仓库获取最新发布版
-        last_version=$(curl -Ls "https://api.github.com/repos/weijinpro/my-s-ui-1.2.2/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-        if [[ ! -n "$last_version" ]]; then
-            echo -e "${red}Failed to fetch s-ui version, it maybe due to Github API restrictions, please try it later${plain}"
-            exit 1
+        # === 新增：交互式多版本选择菜单 ===
+        echo -e "-------------------------------------------------"
+        echo -e "请选择要安装的 S-UI 版本:"
+        echo -e " 1) ${green}v1.4.1${plain} (新打出的汉化核心版 - 默认)"
+        echo -e " 2) ${green}v1.2.2${plain} (经典独立纯净版)"
+        echo -e " 3) 动态获取 GitHub 上的最新 Release 标记"
+        echo -e "-------------------------------------------------"
+        read -p "请输入数字 [1-3] 做出选择 (默认 1): " version_choice
+
+        if [[ "${version_choice}" == "2" ]]; then
+            last_version="1.2.2"
+        elif [[ "${version_choice}" == "3" ]]; then
+            # 如果选 3，依然走以前的自动获取逻辑
+            last_version=$(curl -Ls "https://api.github.com/repos/weijinpro/my-s-ui-1.2.2/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+            if [[ ! -n "$last_version" ]]; then
+                echo -e "${red}Failed to fetch s-ui version, it maybe due to Github API restrictions, please try it later${plain}"
+                exit 1
+            fi
+        else
+            # 默认或者选 1，都去拿 1.4.1
+            last_version="1.4.1"
         fi
-        echo -e "Got s-ui latest version: ${last_version}, beginning the installation..."
-        # 已将包下载路径修改为你自己的 Releases 资产路径
+
+        echo -e "准备安装选定的版本: ${green}v${last_version}${plain}, 开始拉取核心资产包..."
         wget -N --no-check-certificate -O /tmp/s-ui-linux-$(arch).tar.gz https://github.com/weijinpro/my-s-ui-1.2.2/releases/download/${last_version}/s-ui-linux-$(arch).tar.gz
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Downloading s-ui failed, please be sure that your server can access Github ${plain}"
             exit 1
         fi
     else
+        # 如果用户在命令行带参数执行（如 bash install.sh 1.2.2），走原有逻辑
         last_version=$1
-        # 带参数执行的分支也一并帮你修改完美了
         url="https://github.com/weijinpro/my-s-ui-1.2.2/releases/download/${last_version}/s-ui-linux-$(arch).tar.gz"
         echo -e "Beginning the install s-ui v$1"
         wget -N --no-check-certificate -O /tmp/s-ui-linux-$(arch).tar.gz ${url}
