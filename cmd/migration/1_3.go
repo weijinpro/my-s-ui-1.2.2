@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alireza0/s-ui/database/model"
+	"github.com/weijinpro/my-s-ui-1.2.2/database/model"
 
 	"gorm.io/gorm"
 )

@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/alireza0/s-ui/config"
-	"github.com/alireza0/s-ui/logger"
-	"github.com/alireza0/s-ui/middleware"
-	"github.com/alireza0/s-ui/network"
-	"github.com/alireza0/s-ui/service"
+	"github.com/weijinpro/my-s-ui-1.2.2/config"
+	"github.com/weijinpro/my-s-ui-1.2.2/logger"
+	"github.com/weijinpro/my-s-ui-1.2.2/middleware"
+	"github.com/weijinpro/my-s-ui-1.2.2/network"
+	"github.com/weijinpro/my-s-ui-1.2.2/service"
 
 	"github.com/gin-gonic/gin"
 )

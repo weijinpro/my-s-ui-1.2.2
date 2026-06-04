@@ -3,9 +3,9 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/alireza0/s-ui/config"
-	"github.com/alireza0/s-ui/database"
-	"github.com/alireza0/s-ui/service"
+	"github.com/weijinpro/my-s-ui-1.2.2/config"
+	"github.com/weijinpro/my-s-ui-1.2.2/database"
+	"github.com/weijinpro/my-s-ui-1.2.2/service"
 )
 
 func resetAdmin() {

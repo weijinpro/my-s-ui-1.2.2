@@ -1,4 +1,4 @@
-module github.com/alireza0/s-ui
+module github.com/weijinpro/my-s-ui-1.2.2
 
 go 1.25.1
 

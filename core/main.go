@@ -3,7 +3,7 @@ package core
 import (
 	"context"
 
-	"github.com/alireza0/s-ui/logger"
+	"github.com/weijinpro/my-s-ui-1.2.2/logger"
 
 	sb "github.com/sagernet/sing-box"
 	"github.com/sagernet/sing-box/adapter"

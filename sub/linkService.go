@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/alireza0/s-ui/logger"
-	"github.com/alireza0/s-ui/util"
+	"github.com/weijinpro/my-s-ui-1.2.2/logger"
+	"github.com/weijinpro/my-s-ui-1.2.2/util"
 )
 
 type Link struct {

@@ -3,14 +3,14 @@ package app
 import (
 	"log"
 
-	"github.com/alireza0/s-ui/config"
-	"github.com/alireza0/s-ui/core"
-	"github.com/alireza0/s-ui/cronjob"
-	"github.com/alireza0/s-ui/database"
-	"github.com/alireza0/s-ui/logger"
-	"github.com/alireza0/s-ui/service"
-	"github.com/alireza0/s-ui/sub"
-	"github.com/alireza0/s-ui/web"
+	"github.com/weijinpro/my-s-ui-1.2.2/config"
+	"github.com/weijinpro/my-s-ui-1.2.2/core"
+	"github.com/weijinpro/my-s-ui-1.2.2/cronjob"
+	"github.com/weijinpro/my-s-ui-1.2.2/database"
+	"github.com/weijinpro/my-s-ui-1.2.2/logger"
+	"github.com/weijinpro/my-s-ui-1.2.2/service"
+	"github.com/weijinpro/my-s-ui-1.2.2/sub"
+	"github.com/weijinpro/my-s-ui-1.2.2/web"
 
 	"github.com/op/go-logging"
 )

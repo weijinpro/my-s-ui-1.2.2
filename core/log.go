@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	suiLog "github.com/alireza0/s-ui/logger"
+	suiLog "github.com/weijinpro/my-s-ui-1.2.2/logger"
 
 	"github.com/sagernet/sing-box/log"
 	"github.com/sagernet/sing/common"

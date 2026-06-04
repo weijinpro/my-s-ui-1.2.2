@@ -5,8 +5,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/alireza0/s-ui/config"
-	"github.com/alireza0/s-ui/database/model"
+	"github.com/weijinpro/my-s-ui-1.2.2/config"
+	"github.com/weijinpro/my-s-ui-1.2.2/database/model"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
