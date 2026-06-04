@@ -44,8 +44,8 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         images: |
-          alireza7/s-ui
-          ghcr.io/alireza0/s-ui
+          alireza7/my-s-ui-1.2.2
+          ghcr.io/weijinpro/my-s-ui-1.2.2
         tags: |
           type=ref,event=branch
           type=ref,event=tag

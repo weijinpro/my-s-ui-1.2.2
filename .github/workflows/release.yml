@@ -105,7 +105,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: s-ui-linux-${{ matrix.platform }}
-          path: ./s-ui-linux-${{ matrix.platform }}.tar.gz
+          path: ./my-s-ui-1.2.2-linux-${{ matrix.platform }}.tar.gz
           retention-days: 30
 
       - name: Upload to Release

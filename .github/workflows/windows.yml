@@ -88,7 +88,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: s-ui-windows-amd64
-          path: ./s-ui-windows-amd64.zip
+          path: ./my-s-ui-1.2.2-windows-amd64.zip
           retention-days: 30
 
       - name: Upload to Release
@@ -158,7 +158,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: s-ui-windows-arm64
-          path: ./s-ui-windows-arm64.zip
+          path: ./my-s-ui-1.2.2-windows-arm64.zip
           retention-days: 30
 
       - name: Upload ARM64 to Release
