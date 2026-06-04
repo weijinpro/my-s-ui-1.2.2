@@ -136,14 +136,14 @@ install_s-ui() {
 
     if [ $# == 0 ]; then
         # 已将 API 地址修改为你自己的仓库获取最新发布版
-        last_version=$(curl -Ls "https://api.github.com/repos/weijinpro/s-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        last_version=$(curl -Ls "https://api.github.com/repos/weijinpro/my-s-ui-1.2.2/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$last_version" ]]; then
             echo -e "${red}Failed to fetch s-ui version, it maybe due to Github API restrictions, please try it later${plain}"
             exit 1
         fi
         echo -e "Got s-ui latest version: ${last_version}, beginning the installation..."
         # 已将包下载路径修改为你自己的 Releases 资产路径
-        wget -N --no-check-certificate -O /tmp/s-ui-linux-$(arch).tar.gz https://github.com/weijinpro/s-ui/releases/download/${last_version}/s-ui-linux-$(arch).tar.gz
+        wget -N --no-check-certificate -O /tmp/s-ui-linux-$(arch).tar.gz https://github.com/weijinpro/my-s-ui-1.2.2/releases/download/${last_version}/s-ui-linux-$(arch).tar.gz
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Downloading s-ui failed, please be sure that your server can access Github ${plain}"
             exit 1
@@ -151,7 +151,7 @@ install_s-ui() {
     else
         last_version=$1
         # 带参数执行的分支也一并帮你修改完美了
-        url="https://github.com/weijinpro/s-ui/releases/download/${last_version}/s-ui-linux-$(arch).tar.gz"
+        url="https://github.com/weijinpro/my-s-ui-1.2.2/releases/download/${last_version}/s-ui-linux-$(arch).tar.gz"
         echo -e "Beginning the install s-ui v$1"
         wget -N --no-check-certificate -O /tmp/s-ui-linux-$(arch).tar.gz ${url}
         if [[ $? -ne 0 ]]; then
