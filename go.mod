@@ -9,7 +9,7 @@ require (
 	github.com/gofrs/uuid/v5 v5.3.2
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7
 	github.com/robfig/cron/v3 v3.0.1
-	github.com/sagernet/sing v0.7.10
+	github.com/sagernet/sing v0.8.10
 	github.com/sagernet/sing-box v1.12.8
 	github.com/sagernet/sing-dns v0.4.6
 	github.com/shirou/gopsutil/v4 v4.25.8
@@ -148,7 +148,7 @@ require (
 	golang.org/x/mod v0.27.0 // indirect
 	golang.org/x/net v0.43.0 // indirect
 	golang.org/x/sync v0.16.0 // indirect
-	golang.org/x/sys v0.35.0 // indirect
+	golang.org/x/sys v0.41.0 // indirect
 	golang.org/x/term v0.34.0 // indirect
 	golang.org/x/text v0.28.0 // indirect
 	golang.org/x/time v0.9.0 // indirect
